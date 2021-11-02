@@ -179,7 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 681d04b84d28444deabe99c38aebffb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timerText: {fileID: 506597173}
+  timer: {fileID: 506597173}
+  seconds: 57
+  minutes: 0
 --- !u!1 &506597171
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,8 +266,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 200
-  m_fontSizeBase: 200
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

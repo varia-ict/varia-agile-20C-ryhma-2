@@ -5,31 +5,46 @@ using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
-    public TextMeshProUGUI timerText;
-
-    private float secondsCount;
-    private int minuteCount;
+    public TextMeshProUGUI timer;
+    public int seconds = 57;
+    public int minutes = 0;
 
     // Start is called before the first frame update
-    void Start() {
+    void Start()
+    {
+        StartCoroutine(time());
     }
 
     // Update is called once per frame
     void Update()
     {
-        UpdateTimerUI();
+        if (minutes >= 1) { timer.text = "Time " + minutes + ":" + (seconds < 10 ? "0" + seconds.ToString() : seconds.ToString()); }
+        else { timer.text = "Time " + seconds; }
+
+        /*
+        if(peliLoppui)
+        {
+        StopCoroutine(time());
+        }
+         */
     }
 
-    public void UpdateTimerUI()
+    void timeCount()
     {
-        secondsCount += Time.deltaTime;
-        if (minuteCount >= 1) { timerText.text = "Time: " + minuteCount + "." + (int)secondsCount; }
-        else { timerText.text = "Time: " + (int)secondsCount; } 
-
-        if (secondsCount >= 60)
+        seconds += 1;
+        if (seconds > 60)
         {
-            minuteCount++;
-            secondsCount = 0;
+            seconds = 0;
+            minutes += 1;
+        }
+    }
+
+    IEnumerator time()
+    {
+        while (true)
+        {
+            timeCount();
+            yield return new WaitForSeconds(1);
         }
     }
 }
