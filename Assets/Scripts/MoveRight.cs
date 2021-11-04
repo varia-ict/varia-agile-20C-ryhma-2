@@ -28,7 +28,7 @@ public class MoveRight : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = new Vector3(25, 0, 0);
         }
     }*/
-    private void FixedUpdate()
+    private void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
