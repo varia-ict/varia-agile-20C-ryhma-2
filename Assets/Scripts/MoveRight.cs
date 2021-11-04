@@ -7,7 +7,7 @@ public class MoveRight : MonoBehaviour
     private Rigidbody2D playerRb;
     public float moveForce = 8;
     public float gravityModifier;
-    public float speed = 12;
+    public float speed = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +35,6 @@ public class MoveRight : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        playerRb.AddForce(movement * speed);
+        playerRb.AddForce(movement * speed * gravityModifier);
     }
 }
