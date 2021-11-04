@@ -31,6 +31,6 @@ public class MoveLeft : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        playerRb.AddForce(movement * speed);
+        playerRb.AddForce(movement * speed * gravityModifier);
     }
 }
