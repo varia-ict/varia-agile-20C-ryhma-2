@@ -15,7 +15,6 @@ public class PlayerFacing : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            
             transform.Rotate(0.0f, 180f, 0.0f);
         }
         if (Input.GetKeyDown(KeyCode.D))
