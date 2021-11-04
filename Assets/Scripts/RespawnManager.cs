@@ -19,7 +19,7 @@ public class RespawnManager : MonoBehaviour
         }
         if (transform.position.y > 120)
         {
-            SceneManager.LoadScene(sceneName: "YouWin");
+            SceneManager.LoadScene(sceneName: "2Dgame2");
         }
     }
 }
