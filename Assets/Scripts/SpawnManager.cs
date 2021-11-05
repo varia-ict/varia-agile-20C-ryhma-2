@@ -6,16 +6,25 @@ using TMPro;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject timer;
+    public GameObject gameOver;
+
     public TextMeshProUGUI timeText;
+    private Rigidbody2D playerRb;
 
     private float timeRemaining = 60;
-    private bool timerIsRunning = false;
+    public bool timerIsRunning;
 
     // Start is called before the first frame update
     void Start()
     {
         timer.SetActive(true);
         timerIsRunning = true;
+
+        GameObject player = GameObject.Find("Player");
+        PlayerController playerController = player.GetComponent<PlayerController>();
+
+        playerRb = player.GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
@@ -31,8 +40,11 @@ public class SpawnManager : MonoBehaviour
             else
             {
                 timeRemaining = 0;
-                timeText.text = "Time ran out!";
+                timer.SetActive(false);
                 timerIsRunning = false;
+
+                gameOver.SetActive(true);
+                playerRb.constraints = RigidbodyConstraints2D.FreezePositionX;
             }
         }
     }
