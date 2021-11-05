@@ -6931,7 +6931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 0.8
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -7175,8 +7175,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 200
-  m_fontSizeBase: 200
+  m_fontSize: 150
+  m_fontSizeBase: 150
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7802,7 +7802,7 @@ MonoBehaviour:
   timer: {fileID: 1217269926}
   gameOver: {fileID: 1593311652}
   timeText: {fileID: 1217269928}
-  gameOverText: {fileID: 1593311654}
+  timerIsRunning: 0
 --- !u!4 &1684684511
 Transform:
   m_ObjectHideFlags: 0
