@@ -7802,7 +7802,7 @@ MonoBehaviour:
   timer: {fileID: 1217269926}
   gameOver: {fileID: 1593311652}
   timeText: {fileID: 1217269928}
-  gameOverText: {fileID: 1593311654}
+  timerIsRunning: 0
 --- !u!4 &1684684511
 Transform:
   m_ObjectHideFlags: 0
