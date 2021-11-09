@@ -5,7 +5,6 @@ using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject timer;
     public GameObject gameOver;
 
     public TextMeshProUGUI timeText;
@@ -17,11 +16,10 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer.SetActive(true);
+        timeText.gameObject.SetActive(true);
         timerIsRunning = true;
 
         GameObject player = GameObject.Find("Player");
-        PlayerController playerController = player.GetComponent<PlayerController>();
 
         playerRb = player.GetComponent<Rigidbody2D>();
 
@@ -39,13 +37,18 @@ public class SpawnManager : MonoBehaviour
             }
             else
             {
-                timeRemaining = 0;
-                timer.SetActive(false);
-                timerIsRunning = false;
-
-                gameOver.SetActive(true);
-                playerRb.constraints = RigidbodyConstraints2D.FreezePositionX;
+                GameOver();
             }
         }
+    }
+
+    public void GameOver()
+    {
+        timeRemaining = 0;
+        timeText.gameObject.SetActive(false);
+        timerIsRunning = false;
+
+        gameOver.SetActive(true);
+        playerRb.constraints = RigidbodyConstraints2D.FreezePositionX;
     }
 }
