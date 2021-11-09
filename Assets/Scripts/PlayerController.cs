@@ -8,9 +8,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource jumpsound;
     public float jumpForce = 20;
     public float gravityModifier;
-    private bool timerIsRunning;
     public bool isOnGround = true;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +21,7 @@ public class PlayerController : MonoBehaviour
 
     void LateUpdate()
     {
-        GameObject manager = GameObject.Find("SpawnManager");
-        SpawnManager spawnManager = manager.GetComponent<SpawnManager>();
-
-        timerIsRunning = spawnManager.timerIsRunning;
-
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && timerIsRunning)
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
             jumpsound.Play();
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
