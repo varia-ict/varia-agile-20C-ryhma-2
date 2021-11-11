@@ -9646,7 +9646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveForce: 1
-  gravityModifier: 0.5
+  gravityModifier: 1.5
   speed: 15
 --- !u!114 &1902411183
 MonoBehaviour:
@@ -9661,7 +9661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveForce: 1
-  gravityModifier: 0.5
+  gravityModifier: 1.5
   speed: 15
 --- !u!114 &1902411184
 MonoBehaviour:

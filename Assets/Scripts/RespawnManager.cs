@@ -13,7 +13,7 @@ public class RespawnManager : MonoBehaviour
 
     void LateUpdate()
     {
-        if (transform.position.y< -14 && transform.position.x> 50)
+        if (transform.position.y< -14)
         {
             transform.position = StartPoint;
         }
