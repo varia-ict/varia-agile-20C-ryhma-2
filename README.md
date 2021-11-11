@@ -1,0 +1,1 @@
+[![Build project](https://github.com/varia-ict/varia-agile-20C-ryhma-2/actions/workflows/buildAndDeploy.yml/badge.svg)](https://github.com/varia-ict/varia-agile-20C-ryhma-2/actions/workflows/buildAndDeploy.yml)
