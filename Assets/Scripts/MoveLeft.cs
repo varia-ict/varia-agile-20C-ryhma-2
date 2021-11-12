@@ -7,7 +7,7 @@ public class MoveLeft : MonoBehaviour
     private Rigidbody2D playerRb;
     public float moveForce = 8;
     public float gravityModifier;
-    public float speed = 15;
+    public float speed = 11;
     // Start is called before the first frame update
     void Start()
     {

@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2Dgame3.unity
     guid: 64cdee9a8ac6f41678d3a4fc804b0ebf
+  - enabled: 1
+    path: Assets/Menu/Menu.unity
+    guid: 5099fb2aa99b844c2a5996627f45e16a
   m_configObjects: {}

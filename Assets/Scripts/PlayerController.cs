@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Collision: " + collision.gameObject + " Ground: " + obj.gameObject);
         if (collision.gameObject == obj.gameObject)
         {
-            Debug.Log("Jotain tapahtuu");
             isOnGround = true;
         }
     }
