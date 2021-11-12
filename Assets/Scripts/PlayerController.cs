@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     void LateUpdate()
     {
         //var isTouch = playerJump.GetComponent<BoxCollider2D>()
-
+        
         
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
        }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    { 
+    {
         var obj = collision.gameObject;
         if (collision.gameObject == obj.gameObject)
         {
