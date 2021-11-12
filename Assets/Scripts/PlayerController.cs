@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D playerRb;
     //public GameObject playerJump;
     public AudioSource jumpsound;
+    public TextMeshProUGUI scoreText;
+
     public float jumpForce = 20;
     public float gravityModifier;
     public bool isOnGround = true;
+    private int score = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +21,8 @@ public class PlayerController : MonoBehaviour
         Physics.gravity *= gravityModifier;
         jumpsound = GetComponent<AudioSource>();
         //playerJump = playerJump.GetComponent<BoxCollider2D>();
-        
+        scoreText.gameObject.SetActive(true);
+        scoreText.text = "Score: " + score.ToString();
     }
 
     // Update is called once per frame
@@ -36,16 +41,22 @@ public class PlayerController : MonoBehaviour
         }
 
        }
+
     private void OnTriggerEnter2D(Collider2D collision)
     { 
         var obj = collision.gameObject;
-        Debug.Log("Collision: " + collision.gameObject + " Ground: " + obj.gameObject);
         if (collision.gameObject == obj.gameObject)
         {
-            Debug.Log("Jotain tapahtuu");
             isOnGround = true;
         }
+
+        if (collision.gameObject.CompareTag("Collectible"))
+        {
+            Destroy(collision.gameObject);
+            scoreText.text = "Score: " + score++.ToString();
+        }
     }
+
 
     //private void OnCollisionEnter2D(Collision2D collision)
     //{
