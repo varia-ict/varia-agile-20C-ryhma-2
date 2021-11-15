@@ -13,7 +13,7 @@
 
 Clone the repo
    ```sh
-   git clone https://github.com/varia-ict/varia-agile-20C-ryhma-2.gitt
+   git clone https://github.com/varia-ict/varia-agile-20C-ryhma-2.git
    ```
 
 [contributors-shield]: https://img.shields.io/github/contributors/varia-ict/varia-agile-20C-ryhma-2.svg?style=for-the-badge
