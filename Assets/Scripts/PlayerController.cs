@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
     void LateUpdate()
     {
         //var isTouch = playerJump.GetComponent<BoxCollider2D>()
-
         
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
@@ -39,7 +38,6 @@ public class PlayerController : MonoBehaviour
             isOnGround = false;
 
         }
-
        }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -53,7 +51,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Collectible"))
         {
             Destroy(collision.gameObject);
-            scoreText.text = "Score: " + score++.ToString();
+            scoreText.text = "Coins: " + score++.ToString();
         }
     }
 
