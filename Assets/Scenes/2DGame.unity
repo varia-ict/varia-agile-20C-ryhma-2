@@ -9932,7 +9932,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpsound: {fileID: 0}
-  scoreText: {fileID: 1491802580}
   jumpForce: 20
   gravityModifier: 10
   isOnGround: 1

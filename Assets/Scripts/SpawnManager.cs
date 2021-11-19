@@ -11,7 +11,7 @@ public class SpawnManager : MonoBehaviour
     public TextMeshProUGUI timeText;
     private Rigidbody2D playerRb;
 
-    private float timeRemaining = 5;
+    private float timeRemaining = 60;
     public bool timerIsRunning;
 
     // Start is called before the first frame update
