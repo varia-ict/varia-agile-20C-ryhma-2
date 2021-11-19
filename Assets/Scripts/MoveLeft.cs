@@ -7,14 +7,12 @@ public class MoveLeft : MonoBehaviour
     private Rigidbody2D playerRb;
     public float moveForce = 8;
     public float gravityModifier;
-    public float speed = 16;
-    SpriteRenderer SpriteRenderer;
+    public float speed = 10;
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         Physics.gravity *= gravityModifier;
-        SpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -28,21 +26,11 @@ public class MoveLeft : MonoBehaviour
     }*/
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-            SpriteRenderer.flipX = false;
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            transform.position += Vector3.right * -speed * Time.deltaTime;
-            SpriteRenderer.flipX = true;
-        }
-        //float moveHorizontal = Input.GetAxis("Horizontal");
-        //float moveVertical = Input.GetAxis("Vertical");
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
 
-        //Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        //playerRb.AddForce(movement * speed * gravityModifier);
+        playerRb.AddForce(movement * speed * gravityModifier);
     }
 }
