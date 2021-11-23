@@ -9009,10 +9009,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: image 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1094396946330882721, guid: 503c49d9c60f54d7cbd1cf7d1a2451fe, type: 3}
-      propertyPath: m_TagString
-      value: Collectible
-      objectReference: {fileID: 0}
     - target: {fileID: 1094396946330882724, guid: 503c49d9c60f54d7cbd1cf7d1a2451fe, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -9937,7 +9933,6 @@ MonoBehaviour:
   jumpForce: 20
   gravityModifier: 10
   isOnGround: 1
-  scoreText: {fileID: 1491802580}
 --- !u!114 &1902411182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10714,10 +10709,6 @@ PrefabInstance:
     - target: {fileID: 1094396946330882721, guid: 503c49d9c60f54d7cbd1cf7d1a2451fe, type: 3}
       propertyPath: m_Name
       value: image 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094396946330882721, guid: 503c49d9c60f54d7cbd1cf7d1a2451fe, type: 3}
-      propertyPath: m_TagString
-      value: Collectible
       objectReference: {fileID: 0}
     - target: {fileID: 1094396946330882724, guid: 503c49d9c60f54d7cbd1cf7d1a2451fe, type: 3}
       propertyPath: m_RootOrder
