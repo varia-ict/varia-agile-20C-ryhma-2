@@ -4123,8 +4123,6 @@ GameObject:
   - component: {fileID: 2045820400}
   - component: {fileID: 2045820399}
   - component: {fileID: 2045820398}
-  - component: {fileID: 2045820397}
-  - component: {fileID: 2045820396}
   - component: {fileID: 2045820395}
   - component: {fileID: 2045820394}
   - component: {fileID: 2045820393}
@@ -4150,6 +4148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpsound: {fileID: 0}
+  scoreText: {fileID: 0}
   jumpForce: 23
   gravityModifier: 10
   isOnGround: 1
@@ -4288,33 +4287,6 @@ MonoBehaviour:
   moveForce: 1
   gravityModifier: 1
   speed: 7
---- !u!114 &2045820396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045820390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cd6bb6c99269479f950b5003ed975bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveForce: 1
-  gravityModifier: 1
-  speed: 7
---- !u!114 &2045820397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045820390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c907442ffaf5c45ad8fc94022a7fdb4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2045820398
 BoxCollider2D:
   m_ObjectHideFlags: 0

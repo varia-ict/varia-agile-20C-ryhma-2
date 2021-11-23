@@ -911,6 +911,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09dae64a5afc48e6a65f5c43eda261b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainCamera: {fileID: 1632786497}
+  MenuCamera: {fileID: 2043678592}
 --- !u!82 &359414114
 AudioSource:
   m_ObjectHideFlags: 0
@@ -921,7 +923,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: edd793984ead9438ca65608a3d42cb5c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1041,7 +1043,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359414112}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cd6bb6c99269479f950b5003ed975bc, type: 3}
   m_Name: 
@@ -1056,7 +1058,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359414112}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c907442ffaf5c45ad8fc94022a7fdb4a, type: 3}
   m_Name: 
@@ -1121,10 +1123,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpsound: {fileID: 0}
-  scoreText: {fileID: 2024758039}
   jumpForce: 22
   gravityModifier: 1
   isOnGround: 1
+  scoreText: {fileID: 2024758039}
 --- !u!212 &359414122
 SpriteRenderer:
   m_ObjectHideFlags: 0
