@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
             jumpsound.Play();
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             isOnGround = false;
-
+            Debug.Log("ei toimi");
         }
 
        }
@@ -42,5 +42,6 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isOnGround = true;
+        Debug.Log("toimii");
     }
 }
