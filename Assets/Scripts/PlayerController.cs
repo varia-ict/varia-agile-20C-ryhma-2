@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public AudioSource jumpsound;
     public TextMeshProUGUI scoreText;
 
+    
     public float jumpForce = 20;
     public float gravityModifier;
     public bool isOnGround = true;
