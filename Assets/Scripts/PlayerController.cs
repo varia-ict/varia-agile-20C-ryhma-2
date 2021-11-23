@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public bool isOnGround = true;
     public TextMeshProUGUI scoreText;
     private int score = 0;
+    //private GameObject spawnManager2;
 
     // Start is called before the first frame update
     void Start()

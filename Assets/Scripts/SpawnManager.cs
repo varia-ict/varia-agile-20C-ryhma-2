@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SpawnManager : MonoBehaviour
 {
     public GameObject timer;
     public GameObject gameOver;
-
     public TextMeshProUGUI timeText;
     private Rigidbody2D playerRb;
-
-    private float timeRemaining = 60;
+    private float timeRemaining = 6;
+    private float timeRemaining2 = 180;
     public bool timerIsRunning;
 
     // Start is called before the first frame update
@@ -24,7 +24,6 @@ public class SpawnManager : MonoBehaviour
         PlayerController playerController = player.GetComponent<PlayerController>();
 
         playerRb = player.GetComponent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
@@ -45,7 +44,29 @@ public class SpawnManager : MonoBehaviour
 
                 gameOver.SetActive(true);
                 playerRb.constraints = RigidbodyConstraints2D.FreezePositionX;
+
             }
+        }
+        if ((SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame2")))
+        {
+            if (timerIsRunning)
+            {
+                if (timeRemaining2 > 0)
+                {
+                    timeRemaining2 -= Time.deltaTime;
+                    timeText.text = "Time: " + Mathf.RoundToInt(timeRemaining2).ToString();
+                }
+                else
+                {
+                    timeRemaining2 = 0;
+                    timer.SetActive(false);
+                    timerIsRunning = false;
+
+                    gameOver.SetActive(true);
+                    playerRb.constraints = RigidbodyConstraints2D.FreezePositionX;
+                }
+            }
+
         }
     }
 }

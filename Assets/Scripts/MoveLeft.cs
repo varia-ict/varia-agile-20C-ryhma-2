@@ -9,6 +9,8 @@ public class MoveLeft : MonoBehaviour
     public float gravityModifier;
     public float speed = 16;
     SpriteRenderer SpriteRenderer;
+    private bool timerIsRunning;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -28,12 +30,17 @@ public class MoveLeft : MonoBehaviour
     }*/
     private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.D))
+        GameObject manager = GameObject.Find("SpawnManager");
+        SpawnManager spawnManager = manager.GetComponent<SpawnManager>();
+
+        timerIsRunning = spawnManager.timerIsRunning;
+
+        if (Input.GetKey(KeyCode.D) && timerIsRunning)
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
             SpriteRenderer.flipX = false;
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A) && timerIsRunning)
         {
             transform.position += Vector3.right * -speed * Time.deltaTime;
             SpriteRenderer.flipX = true;

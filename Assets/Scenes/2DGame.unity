@@ -9935,7 +9935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpsound: {fileID: 0}
   jumpForce: 20
-  gravityModifier: 10
+  gravityModifier: 0.2
   isOnGround: 1
   scoreText: {fileID: 1491802580}
 --- !u!114 &1902411182
@@ -9952,7 +9952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 1
   gravityModifier: 1
-  speed: 17
+  speed: 20
 --- !u!114 &1902411184
 MonoBehaviour:
   m_ObjectHideFlags: 0

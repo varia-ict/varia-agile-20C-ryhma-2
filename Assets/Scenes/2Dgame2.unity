@@ -883,15 +883,15 @@ GameObject:
   m_Component:
   - component: {fileID: 359414123}
   - component: {fileID: 359414122}
-  - component: {fileID: 359414121}
   - component: {fileID: 359414120}
   - component: {fileID: 359414119}
-  - component: {fileID: 359414118}
-  - component: {fileID: 359414117}
   - component: {fileID: 359414116}
   - component: {fileID: 359414115}
   - component: {fileID: 359414114}
   - component: {fileID: 359414113}
+  - component: {fileID: 359414124}
+  - component: {fileID: 359414121}
+  - component: {fileID: 359414117}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1035,7 +1035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 1
   gravityModifier: 1
-  speed: 7
+  speed: 20
 --- !u!114 &359414117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,24 +1043,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359414112}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cd6bb6c99269479f950b5003ed975bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveForce: 1
-  gravityModifier: 1
-  speed: 7
---- !u!114 &359414118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359414112}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c907442ffaf5c45ad8fc94022a7fdb4a, type: 3}
+  m_Script: {fileID: 11500000, guid: e7ca5c907fd5f4948ba8bdc84bf97f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &359414119
@@ -1119,14 +1104,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 359414112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60aba6eeec02f4feeba122e47aa50320, type: 3}
+  m_Script: {fileID: 11500000, guid: 21ec48051ebff44e1a9e5e6d15067177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpsound: {fileID: 0}
-  jumpForce: 22
-  gravityModifier: 1
-  isOnGround: 1
+  jumpsound: {fileID: 359414114}
   scoreText: {fileID: 2024758039}
+  jumpForce: 20
+  gravityModifier: 0.4
+  isOnGround: 1
 --- !u!212 &359414122
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1193,6 +1178,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0.39, y: 0, z: 0}
+--- !u!114 &359414124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359414112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c4423362ad24f97ad85f31f415c7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 430075333}
+  gameOver: {fileID: 2143410303}
+  timeText: {fileID: 430075335}
+  timerIsRunning: 0
 --- !u!1 &387791621
 GameObject:
   m_ObjectHideFlags: 0
@@ -4903,10 +4904,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5554478230541218f5aa962c604586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 430075333}
-  gameOver: {fileID: 2143410303}
-  timeText: {fileID: 430075335}
-  timerIsRunning: 0
 --- !u!4 &1458159217
 Transform:
   m_ObjectHideFlags: 0
