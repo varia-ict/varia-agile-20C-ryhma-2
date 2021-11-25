@@ -6,21 +6,19 @@ using TMPro;
 public class PlayerController1 : MonoBehaviour
 {
     private Rigidbody2D playerRb;
-    //public GameObject playerJump;
     public AudioSource jumpsound;
     public TextMeshProUGUI scoreText;
-
     public float jumpForce = 20;
     public float gravityModifier;
     public bool isOnGround = true;
     private int score = 0;
+    private bool timerIsRunning;
     // Start is called before the first frame update
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         Physics.gravity *= gravityModifier;
         jumpsound = GetComponent<AudioSource>();
-        //playerJump = playerJump.GetComponent<BoxCollider2D>();
         scoreText.gameObject.SetActive(true);
         scoreText.text = "Score:" + score.ToString();
     }
@@ -30,14 +28,16 @@ public class PlayerController1 : MonoBehaviour
     void LateUpdate()
     {
         //var isTouch = playerJump.GetComponent<BoxCollider2D>()
+        GameObject manager = GameObject.Find("SpawnManager");
+        SpawnManager spawnManager = manager.GetComponent<SpawnManager>();
 
+        timerIsRunning = spawnManager.timerIsRunning;
 
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && timerIsRunning)
         {
             jumpsound.Play();
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             isOnGround = false;
-            Debug.Log("ilmassa");
         }
 
     }
@@ -48,7 +48,6 @@ public class PlayerController1 : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
-            Debug.Log("osuu maahan");
         }
 
         if (collision.gameObject.CompareTag("Collectible"))

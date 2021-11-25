@@ -17,29 +17,39 @@ public class RespawnManager : MonoBehaviour
         {
             transform.position = StartPoint;
         }
-        if (transform.position.y > 120)
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2DGame"))
         {
-            SceneManager.LoadScene(sceneName: "2Dgame2");
+            if (transform.position.y > 120)
+            {
+                SceneManager.LoadScene(sceneName: "2Dgame2");
+            }
         }
-        if ((SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame2")))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame2"))
         {
             if (transform.position.y > 120)
             {
                 SceneManager.LoadScene(sceneName: "2Dgame3");
             }
         }
-        if ((SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame3")))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame3"))
         {
-            if (transform.position.y > 50)
+            if (transform.position.y > 116)
             {
                 SceneManager.LoadScene(sceneName: "2Dgame4");
             }
         }
-        if ((SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame4")))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame4"))
         {
-            if (transform.position.y > 123)
+            if (transform.position.y > 122)
             {
                 SceneManager.LoadScene(sceneName: "2Dgame5");
+            }
+        }
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame5"))
+        {
+            if (transform.position.y > 64)
+            {
+                SceneManager.LoadScene(sceneName: "YouWin");
             }
         }
     }

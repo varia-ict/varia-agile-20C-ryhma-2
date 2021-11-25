@@ -6,18 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject timer;
     public GameObject gameOver;
     public TextMeshProUGUI timeText;
     private Rigidbody2D playerRb;
-    private float timeRemaining = 6;
+    private float timeRemaining = 60;
     private float timeRemaining2 = 180;
     public bool timerIsRunning;
 
     // Start is called before the first frame update
     void Start()
     {
-        timer.SetActive(true);
+        timeText.gameObject.SetActive(true);
         timerIsRunning = true;
 
         GameObject player = GameObject.Find("Player");
@@ -29,9 +28,10 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timerIsRunning)
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("2Dgame2"))
         {
-            if (timeRemaining > 0)
+            if (timerIsRunning)
+                if (timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime;
                 timeText.text = "Time: " + Mathf.RoundToInt(timeRemaining).ToString();
@@ -39,7 +39,7 @@ public class SpawnManager : MonoBehaviour
             else
             {
                 timeRemaining = 0;
-                timer.SetActive(false);
+                timeText.gameObject.SetActive(false);
                 timerIsRunning = false;
 
                 gameOver.SetActive(true);
@@ -47,7 +47,7 @@ public class SpawnManager : MonoBehaviour
 
             }
         }
-        if ((SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame2")))
+        else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame2"))
         {
             if (timerIsRunning)
             {
@@ -59,7 +59,7 @@ public class SpawnManager : MonoBehaviour
                 else
                 {
                     timeRemaining2 = 0;
-                    timer.SetActive(false);
+                    timeText.gameObject.SetActive(false);
                     timerIsRunning = false;
 
                     gameOver.SetActive(true);

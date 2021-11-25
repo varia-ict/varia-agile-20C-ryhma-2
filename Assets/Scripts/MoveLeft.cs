@@ -10,6 +10,7 @@ public class MoveLeft : MonoBehaviour
     public float speed = 16;
     SpriteRenderer SpriteRenderer;
     private bool timerIsRunning;
+
     
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class MoveLeft : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
         Physics.gravity *= gravityModifier;
         SpriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
