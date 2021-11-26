@@ -21,12 +21,12 @@ public class RespawnManager : MonoBehaviour
         {
             if (transform.position.y > 120)
             {
-                SceneManager.LoadScene(sceneName: "2Dgame2");
+                SceneManager.LoadScene(sceneName: "2Dgame5");
             }
         }
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame2"))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame5"))
         {
-            if (transform.position.y > 120)
+            if (transform.position.y > 70)
             {
                 SceneManager.LoadScene(sceneName: "2Dgame3");
             }
@@ -42,12 +42,12 @@ public class RespawnManager : MonoBehaviour
         {
             if (transform.position.y > 122)
             {
-                SceneManager.LoadScene(sceneName: "2Dgame5");
+                SceneManager.LoadScene(sceneName: "2Dgame2");
             }
         }
-        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame5"))
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame2"))
         {
-            if (transform.position.y > 64)
+            if (transform.position.y > 120)
             {
                 SceneManager.LoadScene(sceneName: "YouWin");
             }
