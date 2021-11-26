@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         jumpsound = GetComponent<AudioSource>();
 
         scoreText.gameObject.SetActive(true);
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "Score:" + score.ToString();
     }
 
     // Update is called once per frame
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Collectible"))
         {
             Destroy(collision.gameObject);
-            scoreText.text = "Score: " + score++.ToString();
+            scoreText.text = "Score:" + score++.ToString();
         }
     }
 }

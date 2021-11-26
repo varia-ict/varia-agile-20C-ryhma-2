@@ -34,7 +34,7 @@ public class SpawnManager : MonoBehaviour
                 if (timeRemaining > 0)
             {
                 timeRemaining -= Time.deltaTime;
-                timeText.text = "Time: " + Mathf.RoundToInt(timeRemaining).ToString();
+                timeText.text = "Time:" + Mathf.RoundToInt(timeRemaining).ToString();
             }
             else
             {
@@ -54,7 +54,7 @@ public class SpawnManager : MonoBehaviour
                 if (timeRemaining2 > 0)
                 {
                     timeRemaining2 -= Time.deltaTime;
-                    timeText.text = "Time: " + Mathf.RoundToInt(timeRemaining2).ToString();
+                    timeText.text = "Time:" + Mathf.RoundToInt(timeRemaining2).ToString();
                 }
                 else
                 {
