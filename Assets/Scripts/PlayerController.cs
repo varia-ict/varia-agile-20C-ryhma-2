@@ -56,8 +56,9 @@ public class PlayerController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Collectible"))
         {
+            score++;
             Destroy(collision.gameObject);
-            scoreText.text = "Score: " + score++.ToString();
+            scoreText.text = "Score: " + score.ToString();
         }
     }
 }
