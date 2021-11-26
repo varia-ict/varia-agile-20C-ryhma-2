@@ -58,16 +58,4 @@ public class PlayerController1 : MonoBehaviour
         }
     }
 
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    //isOnGround = true;
-    //    var component = collision.gameObject.GetComponent<BoxCollider2D>();
-    //    Debug.Log(component);
-    //    if (component.CompareTag("Ground"))
-    //    {
-    //        isOnGround = true;
-    //    }
-
-    //}
 }
