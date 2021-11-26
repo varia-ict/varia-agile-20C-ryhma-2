@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 public class menuManager : MonoBehaviour
 {
     public GameObject MainCamera;
     public GameObject MenuCamera;
+    public Button resumeButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +25,13 @@ public class menuManager : MonoBehaviour
             Time.timeScale = 0;
             MenuCamera.SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            MenuCamera.SetActive(false);
-            Time.timeScale = 1;
-        }
+
+        resumeButton.onClick.AddListener(() => ResumeGame());
+    }
+
+    void ResumeGame()
+    {
+        MenuCamera.SetActive(false);
     }
 }
 
