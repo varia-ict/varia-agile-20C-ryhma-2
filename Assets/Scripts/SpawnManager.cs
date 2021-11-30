@@ -12,10 +12,10 @@ public class SpawnManager : MonoBehaviour
     public TextMeshProUGUI gameOverTime;
     private Rigidbody2D playerRb;
     private float timeRemaining = 60;
-    private float timeRemaining2 = 5;//180;
-    private float timeRemaining3 = 5;//60;
-    private float timeRemaining4 = 5;//90;
-    private float timeRemaining5 = 5;//60;
+    private float timeRemaining2 = 180;
+    private float timeRemaining3 = 60;
+    private float timeRemaining4 = 90;
+    private float timeRemaining5 = 60;
     private float restartTime = 7;
     public bool timerIsRunning;
     private bool gameOverBool = false;
