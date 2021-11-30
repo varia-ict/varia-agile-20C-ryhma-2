@@ -26,21 +26,21 @@ public class RespawnManager : MonoBehaviour
         }
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame5"))
         {
-            if (transform.position.y > 70)
+            if (transform.position.y > 73)
             {
                 SceneManager.LoadScene(sceneName: "2Dgame3");
             }
         }
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame3"))
         {
-            if (transform.position.y > 116)
+            if (transform.position.y > 118)
             {
                 SceneManager.LoadScene(sceneName: "2Dgame4");
             }
         }
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("2Dgame4"))
         {
-            if (transform.position.y > 122)
+            if (transform.position.y > 124)
             {
                 SceneManager.LoadScene(sceneName: "2Dgame2");
             }
