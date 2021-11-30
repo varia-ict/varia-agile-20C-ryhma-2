@@ -6915,6 +6915,70 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 5dd49b3eacc540408c98eee0de38e0f1, type: 3}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Transition
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_FadeDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_PressedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_PressedColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_PressedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_ColorMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.49333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799223651197667, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3048799223658789004, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6997,11 +7061,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3048799224774052042, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 20.5
+      value: 13.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799224851597639, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799224851597639, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799224851597639, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799224851597752, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -132
       objectReference: {fileID: 0}
     - target: {fileID: 3048799224924725332, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799225028629389, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799225028629389, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.994489
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048799225028629389, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.4198113
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f0363512d55e4780aeb59eabf48b97e, type: 3}
@@ -10706,7 +10798,6 @@ GameObject:
   - component: {fileID: 1902411184}
   - component: {fileID: 1902411185}
   - component: {fileID: 1902411186}
-  - component: {fileID: 1902411181}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -10844,20 +10935,6 @@ MonoBehaviour:
   gravityModifier: 0.2
   isOnGround: 1
   scoreText: {fileID: 1767915709}
---- !u!114 &1902411181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902411175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ec56cad8e50942d0a3cde3a1bbb1ba0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MenuCamera: {fileID: 0}
-  resumeButton: {fileID: 0}
 --- !u!114 &1902411182
 MonoBehaviour:
   m_ObjectHideFlags: 0
