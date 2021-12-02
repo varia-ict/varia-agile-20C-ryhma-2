@@ -7,11 +7,10 @@ public class PlayerController1 : MonoBehaviour
 {
     private Rigidbody2D playerRb;
     public AudioSource jumpsound;
-    public TextMeshProUGUI scoreText;
     public float jumpForce = 20;
     public float gravityModifier;
     public bool isOnGround = true;
-    private int score = 0;
+
     private bool timerIsRunning;
     // Start is called before the first frame update
     void Start()
@@ -19,8 +18,6 @@ public class PlayerController1 : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
         Physics.gravity *= gravityModifier;
         jumpsound = GetComponent<AudioSource>();
-        scoreText.gameObject.SetActive(true);
-        scoreText.text = "Score:" + score.ToString();
     }
 
     // Update is called once per frame
@@ -53,20 +50,7 @@ public class PlayerController1 : MonoBehaviour
         if (collision.gameObject.CompareTag("Collectible"))
         {
             Destroy(collision.gameObject);
-            scoreText.text = "Score:" + score++.ToString();
         }
     }
 
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    //isOnGround = true;
-    //    var component = collision.gameObject.GetComponent<BoxCollider2D>();
-    //    Debug.Log(component);
-    //    if (component.CompareTag("Ground"))
-    //    {
-    //        isOnGround = true;
-    //    }
-
-    //}
 }

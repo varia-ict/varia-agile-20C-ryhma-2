@@ -11,9 +11,6 @@ public class PlayerController : MonoBehaviour
     public float gravityModifier;
     private bool timerIsRunning;
     public bool isOnGround = true;
-    public TextMeshProUGUI scoreText;
-    private int score = 0;
-    //private GameObject spawnManager2;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +18,6 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
         Physics.gravity *= gravityModifier;
         jumpsound = GetComponent<AudioSource>();
-
-        scoreText.gameObject.SetActive(true);
-        scoreText.text = "Score:" + score.ToString();
     }
 
     // Update is called once per frame
@@ -57,7 +51,6 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Collectible"))
         {
             Destroy(collision.gameObject);
-            scoreText.text = "Score:" + score++.ToString();
         }
     }
 }
