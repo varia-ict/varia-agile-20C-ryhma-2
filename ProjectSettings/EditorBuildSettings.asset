@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2Dgame5.unity
     guid: bfde42a558e6d40db8da319ce2c74240
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 06d2d471d2d734d3e9895453cdeb1429
   m_configObjects: {}
