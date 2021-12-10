@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class cameraController : MonoBehaviour
 {
-
+    // Variables
     public GameObject Player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+    // Functions
     void Update()
     {
+        // Sets the camera position
         transform.position = Player.transform.position + new Vector3(1, 1, -35);
-        
     }
 }

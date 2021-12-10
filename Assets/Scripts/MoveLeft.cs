@@ -4,54 +4,44 @@ using UnityEngine;
 
 public class MoveLeft : MonoBehaviour
 {
-    private Rigidbody2D playerRb;
+    // Public Variables
     public float moveForce = 8;
     public float gravityModifier;
     public float speed = 16;
     SpriteRenderer SpriteRenderer;
-    private bool timerIsRunning;
 
+    // Private Variables
+    private bool timerIsRunning;
+    private Rigidbody2D playerRb;
     
-    // Start is called before the first frame update
+    // Functions
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
         Physics.gravity *= gravityModifier;
         SpriteRenderer = GetComponent<SpriteRenderer>();
-
     }
 
-    // Update is called once per frame
-    /*void LateUpdate()
-    {
-        if (Input.GetKey(KeyCode.A))
-        {
-            //playerRb.AddForce(Vector3.left * moveForce, ForceMode2D.Impulse);
-            GetComponent<Rigidbody2D>().velocity = new Vector3(-25, 0, 0);
-        }
-    }*/
     private void FixedUpdate()
     {
+        // Get SpawnManager Script
         GameObject manager = GameObject.Find("SpawnManager");
         SpawnManager spawnManager = manager.GetComponent<SpawnManager>();
 
+        // Get timerIsRunning Boolean from spawnManager Script
         timerIsRunning = spawnManager.timerIsRunning;
 
         if (Input.GetKey(KeyCode.D) && timerIsRunning)
         {
+            // If D is pressed and timerIsRunning set player x position, and move player
             transform.position += Vector3.right * speed * Time.deltaTime;
             SpriteRenderer.flipX = false;
         }
         else if (Input.GetKey(KeyCode.A) && timerIsRunning)
         {
+            // If A is pressed and timerIsRunning set player x position, and move player
             transform.position += Vector3.right * -speed * Time.deltaTime;
             SpriteRenderer.flipX = true;
         }
-        //float moveHorizontal = Input.GetAxis("Horizontal");
-        //float moveVertical = Input.GetAxis("Vertical");
-
-        //Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-
-        //playerRb.AddForce(movement * speed * gravityModifier);
     }
 }

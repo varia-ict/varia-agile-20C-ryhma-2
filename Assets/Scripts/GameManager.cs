@@ -6,18 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    // Variables
     public Button youWinBtn;
     public Button startGame;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    // Functions
     void Update()
     {
+        // Add listeners to youWin Button and startGame Button
         youWinBtn.onClick.AddListener(() => Restart());
         startGame.onClick.AddListener(() => StartGame());
     }
