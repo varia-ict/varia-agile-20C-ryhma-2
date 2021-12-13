@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 20;
     public float gravityModifier;
     public bool isOnGround = true;
+    public AudioSource coinSound;
 
     // Private Variables
     private Rigidbody2D playerRb;
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
         {
             // If player collides with gameObject that has tag "Collectible"
             // Destroy other gameObject
+            coinSound.Play();
             Destroy(collision.gameObject);
         }
     }

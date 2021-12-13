@@ -16,7 +16,7 @@ public class SpawnManager : MonoBehaviour
     // Private Variables
     private Rigidbody2D playerRb;
     private float timeRemaining = 60;
-    private float timeRemaining2 = 180;
+    private float timeRemaining2 = 120;
     private float timeRemaining3 = 60;
     private float timeRemaining4 = 90;
     private float timeRemaining5 = 60;
